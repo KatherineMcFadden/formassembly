@@ -1,0 +1,28 @@
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+
+   $( document ).ready(function() {
+
+        $("input[id^='tfa_2']").each(function(i){
+
+            var toPopulate = document.getElementById('tfa_6['+i+']');
+            var a = document.createElement('a');
+            var linkText = document.createTextNode("Review");
+            var contactId = document.getElementById('tfa_2['+i+']').value;
+
+            a.href = "https://www.tfaforms.com/433296?cid=" + contactId;
+            a.appendChild(linkText);
+            toPopulate.appendChild(a);
+
+        });
+
+    });
+
+</script>
+<style>
+
+   .removeLink, .duplicateLink {
+    display: none !important;
+  }
+
+</style>

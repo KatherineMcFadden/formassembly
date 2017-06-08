@@ -5,9 +5,9 @@
             var toPopulate = document.getElementById('tfa_6['+i+']');
             var a = document.createElement('a');
             var linkText = document.createTextNode("Review");
-            var contactId = document.getElementById('tfa_2['+i+']').value;
+            var applicationId = document.getElementById('tfa_2['+i+']').value;
 
-            a.href = "https://www.tfaforms.com/433296?cid=" + contactId;
+            a.href = "https://www.tfaforms.com/433296?cid=" + applicationId;
             a.appendChild(linkText);
             toPopulate.appendChild(a);
         });

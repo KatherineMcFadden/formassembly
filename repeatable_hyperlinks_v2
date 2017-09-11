@@ -1,0 +1,24 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.0.min.js"
+  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+  
+  //intializes array to store links
+  var linkArr = [];
+  
+  //adds links to array
+  $('input[id^="tfa_5"]').each(function() {
+   linkArr.push($(this).val());
+  });
+  
+  //replaces hyperlink with values from start link array
+  $(".reviewLink").attr("href", function(i, origLink) {
+    return origLink.replace("https://www.google.com", linkArr[i]);
+  });
+  
+});
+ 
+</script> 
